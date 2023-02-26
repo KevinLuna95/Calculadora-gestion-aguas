@@ -28,10 +28,10 @@ public class ProgramaPrincipal {
 		Scanner sc = new Scanner(System.in);
 		
 		float num1 = 0.0f, num2 = 0.0f, resultado = 0.0f;
-		char operacion = '0';
+		char operacion = 0;
 		
 		//Entrada de datos
-		do {
+		while  (operacion != '0' && operacion != 's' && operacion != 'S') {
 		System.out.println("============ CALCULADORA :: GESTIÓN DE AGUAS, SL ============");
 		System.out.println("Introduzca uno pcion del menu:");
 		System.out.println("1. Sumar (+)");
@@ -111,7 +111,7 @@ public class ProgramaPrincipal {
 								System.out.println("===================================");
 							}else {
 								if (operacion == '0' || operacion == 's' || operacion == 'S') {
-									break;
+									System.out.println("El programa ha finalizado");
 								}
 								//El ejercicio indica que en caso de no introducir un numero entre 0 y 6 debe indicar opcion incorrecta.
 								//Observo 2 defectos: 1- La introduccion de datos es de numeros entre 0 y 5 && 2- La entrada del usuario son tambien simbolos y letras
@@ -123,7 +123,6 @@ public class ProgramaPrincipal {
 					}
 				}
 			}
-		}while  (operacion != '0' || operacion != 's' || operacion != 'S');
-		System.out.println("El programa ha finalizado");
+		}
 	}
 }
